@@ -2,7 +2,7 @@
 % Please edit documentation in R/ingest_api_functions.R
 \name{get_audr_info}
 \alias{get_audr_info}
-\title{Query ingest api for project information to add to an AUDR ticket}
+\title{Query tracker api for project information to add to an AUDR ticket}
 \usage{
 get_audr_info(submission_environment = "prod", project_uuid)
 }
@@ -13,5 +13,5 @@ get_audr_info(submission_environment = "prod", project_uuid)
 }
 \description{
 \code{get_audr_info} provides an easy to use wrapper to query the
-ingest api using a project uuid to get required info for the AUDR ticket
+tracker api using a project uuid to get required info for the AUDR ticket
 }
