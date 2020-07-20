@@ -11,7 +11,7 @@ Functions try to follow 'tidy' principles and include a lot of wrapper functions
 install.packages("devtools")
 
 # then clone the repo to a local directory
-git clone git@github.com:HumanCellAtlas/ranglr.git path/to/repo/ranglr
+git clone git@github.com:ebi-ait/ranglr.git path/to/repo/ranglr
 
 # Then install the package
 devtools::install_local(path="path/to/repo/ranglr")
