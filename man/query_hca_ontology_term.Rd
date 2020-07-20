@@ -4,8 +4,11 @@
 \alias{query_hca_ontology_term}
 \title{Query HCA ontology by term}
 \usage{
-query_hca_ontology_term(ontology_term, ontology,
-  base_url = "https://ontology.staging.data.humancellatlas.org/api/ontologies")
+query_hca_ontology_term(
+  ontology_term,
+  ontology,
+  base_url = "https://ontology.staging.data.humancellatlas.org/api/ontologies"
+)
 }
 \arguments{
 \item{ontology_term}{a vector of string ontology terms e.g. EFO:0009737}

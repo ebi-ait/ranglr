@@ -4,9 +4,12 @@
 \alias{query_ontology_text}
 \title{Query OLS for free text}
 \usage{
-query_ontology_text(free_text,
+query_ontology_text(
+  free_text,
   base_url = "https://ontology.staging.data.humancellatlas.org/api/search?q=",
-  ontologies = NULL, parent_term = NULL)
+  ontologies = NULL,
+  parent_term = NULL
+)
 }
 \arguments{
 \item{free_text}{to use for the query}

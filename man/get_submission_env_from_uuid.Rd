@@ -4,8 +4,7 @@
 \alias{get_submission_env_from_uuid}
 \title{Query ingest api to get submission envelope id from submission uuid}
 \usage{
-get_submission_env_from_uuid(submission_uuid,
-  submission_environment = c("staging", "prod"))
+get_submission_env_from_uuid(sub_uuid, sub_environment = c("staging", "prod"))
 }
 \arguments{
 \item{submission_uuid}{the uuid for the submission}

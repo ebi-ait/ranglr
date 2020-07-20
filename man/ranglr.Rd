@@ -3,7 +3,6 @@
 \docType{package}
 \name{ranglr}
 \alias{ranglr}
-\alias{ranglr-package}
 \title{ranglr: a set of tools for HCA Data Wranglers}
 \description{
 A collection of tools to help with Wrangling and wrangling review

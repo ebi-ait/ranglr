@@ -4,12 +4,12 @@
 \alias{ssh_ec2}
 \title{Connect to EC2}
 \usage{
-ssh_ec2(username, ec2_url = "tool.staging.data.humancellatlas.org")
+ssh_ec2(username, ec2_url = "tool.archive.data.humancellatlas.org")
 }
 \arguments{
 \item{username}{string}
 
-\item{ec2_url}{ec2 url, `tool.staging.data.humancellatlas.org` by default}
+\item{ec2_url}{ec2 url, `tool.archive.data.humancellatlas.org` by default}
 }
 \value{
 connection ssh connection object

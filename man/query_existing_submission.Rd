@@ -4,15 +4,14 @@
 \alias{query_existing_submission}
 \title{Query ingest api for uuids in an existing submission}
 \usage{
-query_existing_submission(submission_uuid,
-  submission_environment = c("staging", "prod"),
-  entity_type = c("biomaterials", "files", "processes", "projects",
-  "protocols"), size = 1000)
+query_existing_submission(
+  submission_envelope,
+  entity_type = c("biomaterials", "files", "processes", "projects", "protocols"),
+  size = 1000
+)
 }
 \arguments{
-\item{submission_uuid}{the submission uuid}
-
-\item{submission_environment}{either `staging` or `prod`}
+\item{submission_envelope}{the link to the submission envelope endpoint}
 
 \item{entity_type}{one of processes, projects, protocols, files, biomaterials}
 

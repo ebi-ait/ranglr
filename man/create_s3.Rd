@@ -4,31 +4,31 @@
 \alias{create_s3}
 \title{Create s3 upload area}
 \usage{
-create_s3(user, project_shorthand,
-  upload_api_key = Sys.getenv("STAGING_UPLOAD_API_KEY"),
-  upload_env_name = "staging", submission_n = 0)
+create_s3(
+  project_shorthand,
+  hca_util_path = paste0(reticulate::virtualenv_root(), "/ranglr_env/bin/hca-util"),
+  permissions = NA,
+  profile = NA
+)
 }
 \arguments{
-\item{user}{your username}
+\item{project_shorthand}{the `shortname of the dataset e.g. my-cool-project}
 
-\item{project_shorthand}{the `-` delimited name of the dataset e.g. my-cool-project}
+\item{hca_util_path}{the path to installed hca-util}
 
-\item{upload_api_key}{the upload api string}
+\item{permissions}{allowed actions (permissions) on new area. u for upload, x
+for delete and d for download. Default is ux}
 
-\item{upload_env_name}{the name of the environment, i.e. staging, dev,
-integration}
-
-\item{submission_n}{by default 0 but can be changed if it is a bucket for
-a subsequent submission for the same project}
+\item{profile}{specify name of admin profile, otherwise uses default}
 }
 \value{
-the url of the s3 bucket of the form \code{s3://org-humancellatlas-upload-staging/aaaaaaaa-bbbb-cccc-dddd-e012345f6789/}
+the uuid of the s3 bucket
 }
 \description{
-\code{create_s3} creates an s3 upload area for a particular project. By
-assumes you have the staging api key saved in your .Renviron file and called
-"STAGING_UPLOAD_API_KEY"
+\code{create_s3} uses the hca-util tool to create an s3 upload area for a
+particular project.
 }
-\examples{
-create_s3("FirstInitialLastName", "my-cool-project")
+\details{
+Assumes you have installed and configured the \code{setup_hca_util} command.
+Can optionally provide the path to where you have installed hca-util
 }

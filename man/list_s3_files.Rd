@@ -4,16 +4,23 @@
 \alias{list_s3_files}
 \title{List files in S3}
 \usage{
-list_s3_files(s3_url, user)
+list_s3_files(
+  s3_uuid,
+  hca_util_path = paste0(reticulate::virtualenv_root(), "/ranglr_env/bin/hca-util")
+)
 }
 \arguments{
-\item{s3_url}{the url of the s3 bucket, e.g. s3://org-humancellatlas-upload-staging/aaaaaaaa-bbbb-cccc-dddd...}
+\item{s3_uuid}{the url of the s3 upload area.}
 
-\item{user}{the user's username usually `FirstInitialLastName`}
+\item{hca_util_path}{the path to the hca-util installation}
 }
 \value{
 a tibble of files in bucket
 }
 \description{
 \code{list_s3_files} lists the s3 files in a given s3 bucket.
+}
+\details{
+Assumes you have installed and configured the \code{setup_hca_util} command.
+Can optionally provide the path to where you have installed hca-util
 }
