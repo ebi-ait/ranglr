@@ -122,3 +122,21 @@ sync_s3 <- function(source_s3, target_s3, profile = NA,
   system(this_sync_command)
 }
 
+#' List upload areas
+#'
+#' \code(list_upload_areas) lists all the areas in the hca-util upload area
+#' space.
+#'
+#' @param hca_util_path the path to installed hca-util
+#' @param profile specify name of admin profile, otherwise uses default
+#' @export
+list_upload_areas <- function(hca_util_path = paste0(reticulate::virtualenv_root(),
+                                                      "/ranglr_env/bin/hca-util"),
+                              profile = NA){
+  this_command <- paste0(hca_util_path, " list -b")
+  if(!is.na(profile)){
+    this_command <- paste0(this_command, " --profile ", profile)
+  }
+  system(this_command)
+}
+
