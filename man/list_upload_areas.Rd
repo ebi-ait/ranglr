@@ -15,6 +15,6 @@ list_upload_areas(
 \item{profile}{specify name of admin profile, otherwise uses default}
 }
 \description{
-\code(list_upload_areas) lists all the areas in the hca-util upload area
+\code{list_upload_areas} lists all the areas in the hca-util upload area
 space.
 }

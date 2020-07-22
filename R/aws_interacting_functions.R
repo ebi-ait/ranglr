@@ -102,7 +102,7 @@ create_s3 <- function(project_shorthand,
 
 #' Sync files between hca-util and ingest upload areas
 #'
-#' \code(sync_s3) copies files from an hca-util upload area into an ingest
+#' \code{sync_s3} copies files from an hca-util upload area into an ingest
 #' submission upload area
 #'
 #' @param source_s3 the uuid of the hca-util upload area to copy from
@@ -124,7 +124,7 @@ sync_s3 <- function(source_s3, target_s3, profile = NA,
 
 #' List upload areas
 #'
-#' \code(list_upload_areas) lists all the areas in the hca-util upload area
+#' \code{list_upload_areas} lists all the areas in the hca-util upload area
 #' space.
 #'
 #' @param hca_util_path the path to installed hca-util

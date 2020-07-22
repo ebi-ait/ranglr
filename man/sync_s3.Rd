@@ -21,6 +21,6 @@ sync_s3(
 \item{hca_util_path}{the path to installed hca-util}
 }
 \description{
-\code(sync_s3) copies files from an hca-util upload area into an ingest
+\code{sync_s3} copies files from an hca-util upload area into an ingest
 submission upload area
 }
