@@ -369,6 +369,26 @@ get_ontologies <- function(tibble_list) {
 # harvests ontology terms from an existing spreadsheet
 
 
+#' Get author list from contributors
+#'
+#' \code{get_author_from contributors} formats the publication authors based on what is in the contributors tab and formats in the correct format, initials, surname and \code{||} separated.
+#'
+#' @param tibble_list the list of tibbles outputted from `load_spreadsheet()`
+#' @return a string of the authors from the contributor tab
+#' @export
+get_authors_from_contributors <- function(tibble_list){
+  tibble_list$`Project - Contributors` %>%
+    dplyr::filter(project.contributors.project_role.ontology != "EFO:0009737") %>%
+    dplyr::select(project.contributors.name) %>%
+    dplyr::separate(project.contributors.name, sep = ",",
+                    into = c("first", "middle", "last")) %>%
+    dplyr::mutate(full_initials = paste0(stringr::str_sub(first, 1, 1),
+                                        stringr::str_sub(middle, 1, 1),
+                                        " ", last)) %>%
+    dplyr::pull(full_initials) %>%
+    paste0(collapse = "||")
+}
+
 
 
 
